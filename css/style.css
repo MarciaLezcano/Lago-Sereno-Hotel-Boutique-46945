@@ -1,11 +1,11 @@
 /*!--------RESET--------*/
 
-*{
+* {
     margin: 0%;
     padding: 0%;
 }
 
-body{
+body {
     font-family: 'Raleway', sans-serif;
     background-color: rgb(10, 41, 37);
 }
@@ -13,82 +13,132 @@ body{
 
 /*!--------HEADER--------*/
 
-.grid-container{
+.grid-container {
     width: 100%;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px, 250px, 250px, 250px, 250px, 250px;
+    grid-template-rows: auto;
     grid-template-areas:
-    "header nav nav"
-    "main main main"
-    "main main main"
-    "main main main"
-    "main main main"
-    "main main main"
-    "footer footer footer"
-    "footer footer footer";
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "main main main"
+        "main main main"
+        "main main main"
+        "main main main"
+        "footer footer footer"
+        "footer footer footer";
 }
 
 
-.header{
+.header {
     grid-area: header;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1;
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 1/2;
-    background-color: rgb(34, 83, 77)
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(31, 65, 61)
 }
 
+.container-titulo {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
 
-.logo img{
-    width: 300px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+}
+
+.titulo h1 {
+    width: 100%;
+    color: rgb(235, 218, 218);
     display: grid;
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 1/3;
+    font-size: 23px;
+    font-family: 'GFS Didot', serif;
+    padding-top: 10px;
 }
 
-.collapse navar-collapse{
+.titulo h2 {
+    width: 100%;
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    color: rgb(235, 218, 218);
+    font-size: 15px;
+    font-family: 'GFS Didot', serif;
+}
+
+.logo img {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px
+}
+
+.navbar {
+    grid-area: nav;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 20px;
+}
+
+.navbar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px
+}
+
+.navbar-toggler-icon {
+    color: rgb(235, 218, 218);
+}
+
+.collapse navar-collapse {
     background-color: rgb(34, 83, 77);
 }
 
-
-.navbar-nav{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 15px;
-}
-.nav-item{
-    font-size: 16px;
+.nav-item {
+    font-size: 15px;
     margin: 16px;
     text-align: end;
     display: inline-block;
 }
 
-.nav-link{
+.nav-link {
     color: rgb(235, 218, 218);
     text-decoration: none;
-    list-style: none;   
+    list-style: none;
 }
 
 
 
 /*!--------MAIN--------*/
 
-.contenido{
+.contenido {
     width: 100%;
     grid-area: main;
     display: grid;
-    grid-column: 1/4;
-    grid-row: 2/7;
-    
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 1150px;
 }
 
-.hero{
+.hero {
     width: 100%;
     display: grid;
     grid-column: 1/4;
@@ -96,7 +146,7 @@ body{
     margin-top: 20px;
 }
 
-.hero img{
+.hero img {
     width: 100%;
     height: 500px;
     border: 2px solid rgb(119, 86, 37);
@@ -106,7 +156,7 @@ body{
     grid-row: span 2;
 }
 
-.hero h2{
+.hero h2 {
     display: grid;
     grid-column-start: 3;
     grid-column-end: 4;
@@ -122,7 +172,7 @@ body{
     background-color: rgb(10, 41, 37)
 }
 
-.hero a{
+.hero a {
     display: grid;
     grid-column: 3/4;
     grid-row: 4/5;
@@ -136,7 +186,7 @@ body{
     margin: 25px
 }
 
-.cards-review{
+.cards-review {
     grid-column: 1/4;
     grid-row: 7/8;
     display: flex;
@@ -147,7 +197,7 @@ body{
     border: 2px solid rgb(119, 86, 37);
 }
 
-.card{
+.card {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -155,65 +205,73 @@ body{
     background-color: rgb(10, 41, 37);
 }
 
-.card-body{
+.card-body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.card-text{
+.card-text {
     font-size: 12px;
     text-align: center;
     background-color: rgb(111, 140, 120);
     font-family: 'Lato', sans-serif;
-    color:rgb(235, 218, 218);
+    color: rgb(235, 218, 218);
 }
 
-.card-img-top{
+.card-img-top {
     width: 130px;
     height: 130px;
     padding: 10px;
+    border-radius: 130px;
 }
 
-.presentacion .bienvenida{
+/* ELHOTEL.HTML */
+
+.presentacion {
+    width: 100%;
+    grid-area: main;
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/7;
     background-color: rgb(10, 41, 37);
 }
 
-.presentacion h2{
+.presentacion h2 {
+    width: 100%;
     color: rgb(235, 218, 218);
-    height: 30px;
-    padding: 25px 15px 10px 15px;
     text-align: center;
     font-style: italic;
     font-size: 20px;
     background-color: rgb(10, 41, 37);
+    padding: 20px;
 }
 
-.bienvenida{
+.bienvenida {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+    justify-content: space-between;
+    align-items: center
 }
 
-.presentacion .bienvenida img{
+.bienvenida img {
     width: 600px;
     height: 400px;
     padding: 30px;
 }
 
-:is(p){
+:is(p) {
     text-align: center;
     font-size: 20px;
     color: rgb(235, 218, 218);
 }
+
 /* se que me sugeriste agrupar las clases, me cuesta un poco hacerlo todavía, ya que me mareo y confundo, interpreto que una de las formas podría ser así con el :is() o simplemente repitiendo clases. Lo entendí, me falta práctica */
 
-.presentacion .bienvenida p{
+.bienvenida p {
     padding: 45px;
 }
 
-.presentacion .historia{
+.presentacion .historia {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,7 +280,7 @@ body{
     width: 100%;
 }
 
-.presentacion .historia h2{
+.presentacion .historia h2 {
     color: rgb(235, 218, 218);
     width: 100%;
     height: 30px;
@@ -232,18 +290,18 @@ body{
     font-size: 30px;
 }
 
-.presentacion .historia img{
+.presentacion .historia img {
     width: 600px;
     height: 500px;
     margin-top: 20px;
     padding: 20px 20px 20px 20px;
 }
 
-.presentacion .historia p{
+.presentacion .historia p {
     padding: 20px 20px 20px 20px;
 }
 
-.presentacion a{
+.presentacion a {
     border: 2px solid rgb(119, 86, 37);
     color: rgb(235, 218, 218);
     text-decoration: none;
@@ -251,10 +309,10 @@ body{
     margin: 0px 20px 20px 20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center ;
+    align-items: center;
 }
 
-.habitaciones{
+.habitaciones {
     display: grid;
     grid-column: 1/4;
     grid-row: 5/6;
@@ -262,7 +320,7 @@ body{
     background-color: rgb(235, 218, 218);
 }
 
-.habitacion-index{
+.habitacion-index {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -271,22 +329,21 @@ body{
     margin: 20px;
 }
 
-
-.habitaciones img{
+.habitaciones img {
     width: 250px;
     height: 200px;
 }
 
-.habitaciones p{
+.habitaciones p {
     text-align: center;
     font-size: 17px;
     color: rgb(10, 41, 37);
     margin: 13px;
     padding: 10px 15 px 10px 15px;
-    
+
 }
 
-.habitaciones a{
+.habitaciones a {
     border: 2px solid rgb(119, 86, 37);
     color: rgb(235, 218, 218);
     text-decoration: none;
@@ -295,17 +352,22 @@ body{
     margin: 0px 20px 0px 20px;
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
+    font-size: 16px;
 }
 
-.interior-habitaciones{
+.interior-habitaciones {
+    grid-area: main;
     background-color: rgb(10, 41, 37);
+    width: 100%;
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/4;
 }
 
-.interior-habitaciones h2{
+.interior-habitaciones h2 {
     color: rgb(235, 218, 218);
     width: 100%;
-    height: 30px;
     padding: 15px 15px 10px 15px;
     text-align: center;
     font-style: italic;
@@ -316,49 +378,63 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
-.interior-habitaciones .nuestras-habitaciones p{
+.interior-habitaciones .nuestras-habitaciones p {
     color: rgb(235, 218, 218);
-    width: 100%;
-    height: 30px;
+    width: 40%;
+    height: auto;
     padding: 15px 30px 10px 30px;
-    text-align: center;
+    text-align:center;
     font-style: italic;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.nuestras-habitaciones img{
-    width: 300px;
-    height: 400px;
-    padding: 20px 20px 35px 20px;
-    }
+.nuestras-habitaciones img {
+    width: 400px;
+    height: 500px;
+    padding: 20px 20px 35px 20px; 
+}
 
-.galeria-habitaciones{
+.interior-habitaciones .galeria-habitaciones {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:90%;
+    transform: scale(1.1);
+    margin: 25px;
+    gap:20px
+}
+
+.interior-habitaciones .galeria-habitaciones img {
+    width: 200px;
+    height: 200px;
+    margin: 25px,0px,20px,0px;
+    transition: 1s;
+    justify-items: center;
+}
+
+.interior-habitaciones .galeria-habitaciones img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+}
+
+.interior-habitaciones a {
+    border: 2px solid rgb(119, 86, 37);
+    color: rgb(235, 218, 218);
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    margin: 25px 20px 20px 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 35px;
 }
 
-.galeria-habitaciones img{
-    width: 250px;
-    height: 200px;
-}
-
-.interior-habitaciones a{
-    border: 2px solid rgb(119, 86, 37);
-    color:rgb(235, 218, 218);
-    text-decoration: none;
-    padding: 10px 10px 10px 10px;
-    margin: 0px 20px 20px 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center ;
-}
-
-.restaurante{
+.restaurante {
     display: grid;
     grid-column: 1/4;
     grid-row: 6/7;
@@ -366,7 +442,7 @@ body{
     padding: 15px;
 }
 
-.restaurante-index{
+.restaurante-index {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -375,12 +451,12 @@ body{
     margin: 20px;
 }
 
-.restaurante img{
+.restaurante img {
     width: 250px;
     height: 200px;
 }
 
-.restaurante p{
+.restaurante p {
     text-align: center;
     font-size: 17px;
     color: rgb(10, 41, 37);
@@ -388,33 +464,34 @@ body{
     padding: 10px 10 px 10px 10px;
 }
 
-.restaurante a{
+.restaurante a {
     border: 2px solid rgb(119, 86, 37);
     color: rgb(235, 218, 218);
     text-decoration: none;
+    font-size: 15px;
     background-color: rgb(10, 41, 37);
     padding: 10px 10px 10px 10px;
     margin: 0px 20px 0px 20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center ;
+    align-items: center;
 }
 
-.gastronomia{
+.gastronomia {
     background-color: rgb(10, 41, 37);
     color: rgb(235, 218, 218);
     padding: 15px;
 }
 
-.gastronomia h2{
+.gastronomia h2 {
     text-align: center;
     font-size: 30px;
     font-style: italic;
     padding: 15px;
 }
 
-.gastronomia p{
-    color:rgb(235, 218, 218);
+.gastronomia p {
+    color: rgb(235, 218, 218);
     width: 100%;
     height: 30px;
     padding: 15px 30px 10px 30px;
@@ -423,42 +500,46 @@ body{
     font-size: 20px;
 }
 
-.gastronomia .galeria-resto{
+.gastronomia .galeria-resto {
     background-color: rgb(10, 41, 37);
 }
 
-.galeria-resto{
+.galeria-resto {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 50px;
 }
-.galeria-resto img{
+
+.galeria-resto img {
     width: 250px;
     height: 270px;
 }
 
-.grid-galeriaamenities{
+
+/* AMENITIES.HTML */
+
+.grid-galeriaamenities {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 500px;
-    gap: 30px;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-auto-rows: 300px;
+    gap: 20px;
     margin-top: 20px;
-    
+
 }
 
-.grid-galeriaamenities div{
+.grid-galeriaamenities div {
     position: relative;
 }
 
-.grid-galeriaamenities div img{
+.grid-galeriaamenities div img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
 }
 
-.grid-galeriaamenities div h3{
+.grid-galeriaamenities div h3 {
     text-align: center;
     font-size: medium;
     color: rgb(235, 218, 218);
@@ -467,17 +548,19 @@ body{
     background-color: rgba(0, 0, 0, 0.31);
     width: 100%;
 }
-.imgyoganieve{
-    grid-column: span 2;
-}
-.imgmasajespa{
-    grid-row: span 2;
-}
-.imgtreaking{
-    grid-column: span 2;
+
+.imgyoganieve {
+    grid-column: span 1;
 }
 
-.introspa{
+.imgmasajespa {
+    grid-row: span 3;
+}
+.escalada-deportiva {
+    grid-row: span 2;
+}
+
+.introspa {
     text-align: center;
     color: rgb(235, 218, 218);
     background-color: rgba(34, 83, 77, 0.31);
@@ -487,28 +570,56 @@ body{
     font-size: 25px;
     font-style: italic;
 }
-    
-    /*!--------FOOTER--------*/
+/* RESERVAS HTML */
 
-.pie{
+.reservar{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    margin: 20px;
+}
+
+.reservas h4 {
+    padding: 15px 10px 15px 10px;
+    font-size: 15px;
+    color: rgb(10, 41, 37);
+    background-color: rgb(235, 218, 218)
+}
+
+.reservas form div {
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(235, 218, 218);
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+/*!--------FOOTER--------*/
+
+.pie {
     grid-area: footer;
     width: 100%;
     height: auto;
     background-color: rgb(235, 218, 218);
     display: grid;
     grid-column: 1/4;
-    grid-row: 7/9;
+    grid-row: 8/10;
 }
 
 
-.mapa{
+.mapa {
     background-color: rgb(235, 218, 218);
     display: grid;
     grid-column: 1/2;
     grid-row: 1/2;
 }
 
-.pie .mapa h4{
+.pie .mapa h4 {
     padding: 15px 10px 15px 10px;
     font-size: 15px;
     color: rgb(10, 41, 37);
@@ -516,7 +627,7 @@ body{
     margin: 20px;
 }
 
-.pie .mapa iframe{
+.pie .mapa iframe {
     width: 200px;
     height: 200px;
     display: flex;
@@ -525,14 +636,14 @@ body{
     padding: 20px;
 }
 
-.pie .mapa p{
+.pie .mapa p {
     font-size: 15px;
     text-align: left;
     color: rgb(10, 41, 37);
     padding: 10px 10px 10px 10px;
 }
 
-.pie .reservas{
+.pie .reservas {
     background-color: rgb(235, 218, 218);
     color: rgb(10, 41, 37);
     margin: 20px;
@@ -542,14 +653,15 @@ body{
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.reservas h4{
+
+.reservas h4 {
     padding: 15px 10px 15px 10px;
     font-size: 15px;
     color: rgb(10, 41, 37);
     background-color: rgb(235, 218, 218)
 }
 
-.reservas form div{
+.reservas form div {
     font-style: italic;
     font-size: 15px;
     color: rgb(10, 41, 37);
@@ -560,23 +672,23 @@ body{
 }
 
 
-.pie .redes-sociales h4{
+.pie .redes-sociales h4 {
     padding: 10px;
-    margin: 20px;
+    margin: 0;
     font-size: 15px;
     color: rgb(10, 41, 37);
     background-color: rgb(235, 218, 218);
 }
 
-.pie .redes-sociales{
+.pie .redes-sociales {
     width: 100%;
     height: 100px;
-    background-color:rgb(235, 218, 218);
+    background-color: rgb(235, 218, 218);
     grid-column: 1/2;
     grid-row: 2/3;
 }
 
-.redes-sociales div a img{
+.redes-sociales div a img {
     width: 25px;
     height: 25px;
     margin: 15px;
@@ -585,26 +697,420 @@ body{
     align-items: center;
     display: inline-block;
 }
-    
 
-@media screen and (max-width:995px){
+/*-------- MEDIAS QUERYS--------- */
 
-.grid-container{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 250px, 250px, 250px, 250px, 250px, 250px, 250px, 250px, auto, 250px;
+/* INDEX HTML */
+@media screen and (max-width:997px) {
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "main main"
+            "main main"
+            "main main"
+            "main main"
+            "main main"
+            "footer footer"
+            "footer footer";
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenido {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .hero img {
+        width: 60%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .hero a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .hero img {
+        width: 65%;
+        height: 250px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:695px) {
+
+    .habitaciones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .habitacion-index {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .habitaciones a {
+        font-size: 13px;
+    }
+
+    .restaurante {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .restaurante-index {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .restaurante a {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "footer"
+            "footer";
+    }
+
+    .container-titulo {
+        justify-content: space-between;
+    }
+
+    .logo img {
+        margin: 0;
+    }
+
+    .navbar {
+        width: 60%;
+        margin: 0;
+    }
+
+    .titulo h1 {
+        font-size: 20px;
+    }
+
+    .titulo h2 {
+        font-size: 15px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .hero a {
+        font-size: 13px;
+    }
+
+    .pie .mapa p {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .logo img {
+        width: 60%;
+    }
+
+    .navbar {
+        width: 50%;
+    }
+
+    .titulo {
+        width: 100%;
+    }
+
+    .titulo h1 {
+        font-size: 18px;
+    }
+
+    .titulo h2 {
+        font-size: 13px;
+    }
+
+    .hero img {
+        margin: 20px
+    }
+
+    .habitacion-index p {
+        font-size: 15px;
+    }
+
+    .restaurante-index p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:430px) {
+
+    .header {
+        height: 100px;
+
+    }
+
+    .logo {
+        width: 80%;
+        height: auto;
+    }
+
+    .navbar {
+        width: 30%;
+        margin: 0;
+    }
+
+    .hero img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+    }
+
+    .hero a {
+        font-size: 11px;
+    }
+
+    .habitacion-index p {
+        font-size: 15px;
+    }
+
+    .habitacion a {
+        font-size: 11px;
+    }
+
+    .restaurante-index p {
+        font-size: 15px;
+    }
+
+    .restaurante-index a {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:365) {}
+
+
+/*ELHOTEL.HTML*/
+
+@media screen and (max-width:898px) {
+    .navbar-toggler {
+        margin: 15px;
+    }
+
+    .presentacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .presentacion h2 {
+        font-size: 17px;
+    }
+
+    .bienvenida {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .bienvenida img {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .presentacion .historia {
+        flex-direction: column;
+    }
+
+    .presentacion .historia img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .bienvenida p {
+        font-size: 15px;
+    }
+
+    .historia p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .grid-container {
+        width: 500px;
+    }
+}
+
+/*HABITACIONES.HTML*/
+@media screen and (max-width:1000px){
+
+.grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
-    "header nav"
-    "main main"
-    "main main"
-    "main main"
-    "main main"
-    "main main"
-    "main main"
-    "footer footer"
-    "footer footer";
+        "header"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "footer"
+        "footer";
+}    
+
+.nuestras-habitaciones div img{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.interior-habitaciones .nuestras-habitaciones p {
+    display: flex;
+    flex-direction: column;
+}
+.galeria-habitaciones div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: colum;
+}
+
+}
+
+/* AMENITIES HTML */
+
+@media screen and (max-width:950px){
+.contenido{
+    display:grid;
+    grid-row: 2/8;
+}
+
+.grid-galeriaamenities {
+    width: 90%;
+    height: 100%;
+    grid-template-columns:repeat(2,1fr) ;
+    margin:25px;
+    padding-top: 25px;
+    }
+.grid-galeriaamenities div{
+    grid-row: span 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 }
-/* salvo por la modificación en el .grid-container, haciendo uso de media query, todas las demás modificaciones suceden antes del punto de ruptura, y todas las moficaciones, se aplican a la versión de tamaño original, y no puedo descubrir por qué */
+
+@media screen and (max-width:750px){
 
 
-/* quise aplicar el :is() para la clase .habitacion-index y .restaurante index y aplicar a las mismas el flex direction column pero no me tomaba el cambio, aunque sí de manera individual.*/
+.grid-galeriaamenities{
+    gap:10px;
+    width:95%;
+}
+.introspa p{
+    width: 100%;
+    font-size: 18px;
+}
+}
+
+@media screen and (max-width:600px){
+
+.contenido{
+    grid-auto-rows: 1500px;
+}
+.grid-galeriaamenities{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}    
+.escalada-deportiva{
+    width: 40%;
+}
+.imgyoganieve{
+    width: 60%;
+}
+.imgmasajespa{
+    width: 50%;
+}
+.introspa p{
+    font-size: 13px;
+}
+.mujer-piscina h3{
+    display: none;
+}
+.mujer-piscina img{
+    display: none;
+}
+.treaking-nieve h3{
+    display:none;
+}
+.treaking-nieve img{
+    display: none;
+}
+}

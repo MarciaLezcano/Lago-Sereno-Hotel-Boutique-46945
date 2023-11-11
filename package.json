@@ -1,0 +1,18 @@
+{
+  "name": "comision-46945",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi 🙋‍♀️, I'm Marcia</h1>\r <h3 align=\"center\">## Hola!! Mi nombre es Marcia y soy de Argentina.## Este es mi primer proyecto web 💻🤓, donde pongo en práctica las herramientas que he aprendido como HTML, CSS, box modeling, flexbox, grids, media query, bootstrap y git. ## 👌Con este proyecto, aprendí a usar las 🛠 herramientas básicas del desarrollo web, como HTML para crear la estructura de la página, CSS para darle estilo y diseño, y bootstrap para facilitar el uso de componentes y hacer la página responsive 📱. También aprendí a usar git para gestionar las versiones del código y subirlo a GitHub.## Mi objetivo es seguir aprendiendo y mejorando 👩‍💻, no solo en el desarrollo del mismo sino también en el uso de las herramientas para simplificar y hacer uso de los códigos de manera más eficiente. También pretendo mejorar el aspecto de la página, para hacerla más moderna e interesante, usando animaciones, transiciones, fuentes, colores, etc. Sé que hay mucho por trabajar, pero espero poder seguir trabajando en este proyecto y en otros más para lograr hacerlos como me gustaría.🤗</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "watch-css":"nodemon -e scss -x \"npm run build-css\""
+},
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1"
+  }
+}
