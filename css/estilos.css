@@ -1,0 +1,399 @@
+/*!--------VARIABLES-------*/
+/*LISTAS*/
+/*EXTENDS*/
+.grid-container .header .container-titulo .logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.grid-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.contenido .habitaciones .habitacion.index p, .contenido .restaurante .restaurante-index p {
+  text-align: center;
+  font-size: 17px;
+  color: #0a2925;
+  margin: 13px;
+  padding: 10px 15px 10px 15px; }
+
+.contenido .habitaciones a, .contenido .restaurante a {
+  border: 2px solid #775625;
+  color: #ebdada;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 20px 20px 20px;
+  background-color: #0a2925;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.interior-habitaciones .nuestras-habitaciones .galeria-habitaciones img {
+  width: 200px;
+  height: 200px;
+  margin: 25px,0px,20px,0px;
+  transition: 1s;
+  justify-items: center; }
+
+/*MIXINS*/
+/*!--------RESET--------*/
+* {
+  margin: 0%;
+  padding: 0%; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #0a2925; }
+
+/*!--------BOOSTRAP--------*/
+.navbar {
+  grid-area: nav;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 20px; }
+  .navbar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px; }
+  .navbar .navbar-toggler-icon {
+    color: #ebdada; }
+  .navbar .collapse {
+    background-color: #22534d; }
+    .navbar .collapse .navbar-nav .nav-item {
+      font-size: 15px;
+      margin: 16px;
+      text-align: end;
+      display: inline-block; }
+    .navbar .collapse .navbar-nav .nav-link {
+      color: #ebdada;
+      text-decoration: none;
+      list-style: none; }
+
+/*!--------INDEX MAIN BOOSTRAP CARDS REVIEW--------*/
+.cards-review {
+  grid-column: 1/4;
+  grid-row: 7/8;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 33px 20px 33px;
+  border: 2px solid #775625; }
+  .cards-review .card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    background-color: #0a2925; }
+    .cards-review .card .card-img-top {
+      width: 130px;
+      height: 130px;
+      padding: 10px;
+      border-radius: 130px; }
+    .cards-review .card .card-body {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .cards-review .card .card-body .card-text {
+        font-size: 12px;
+        text-align: center;
+        background-color: #6f8c78;
+        font-family: 'Lato', sans-serif;
+        color: #ebdada; }
+
+/*!--------IFRAME GOOGLE MAPS FOOTER--------*/
+iframe {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; }
+
+/*!--------INDEX HEADER--------*/
+.grid-container {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header header"
+ "nav nav nav"
+ "main main main"
+ "main main main"
+ "main main main"
+ "main main main"
+ "main main main"
+ "footer footer footer"
+ "footer footer footer"; }
+  .grid-container .header {
+    grid-area: header;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #1f413d; }
+    .grid-container .header .container-titulo {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: row; }
+      .grid-container .header .container-titulo .logo img {
+        width: 120px;
+        margin: 10px; }
+      .grid-container .header .container-titulo .titulo {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-direction: column; }
+        .grid-container .header .container-titulo .titulo h1 {
+          width: 100%;
+          color: #ebdada;
+          display: grid;
+          grid-column: 1/2;
+          grid-row: 1/3;
+          font-size: 25px;
+          font-family: nth "GFS Didot", serif, 1;
+          padding-top: 10px; }
+        .grid-container .header .container-titulo .titulo h2 {
+          width: 100%;
+          display: grid;
+          grid-column: 1/2;
+          grid-row: 1/3;
+          color: #ebdada;
+          font-size: 15px;
+          font-family: "GFS Didot"; }
+
+/*!--------INDEX.HTML--------*/
+.contenido {
+  width: 100%;
+  grid-area: main; }
+  .contenido .hero {
+    width: 100%;
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/4;
+    margin-top: 20px; }
+    .contenido .hero img {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #775625;
+      margin: 40px;
+      display: grid;
+      grid-column: span 2;
+      grid-row: span 2; }
+    .contenido .hero h2 {
+      display: grid;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      place-items: center;
+      font-style: italic;
+      text-align: center;
+      color: #ebdada;
+      font-size: 30px;
+      margin: 40px;
+      padding: 20px;
+      background-color: #0a2925; }
+    .contenido .hero a {
+      display: grid;
+      grid-column: 3/4;
+      grid-row: 4/5;
+      border: 2px solid #775625;
+      color: #22534d;
+      font-size: 15px;
+      text-decoration: none;
+      text-align: center;
+      background-color: #ebdada;
+      padding: 10px 10px 10px 10px;
+      margin: 25px; }
+  .contenido .habitaciones {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 5/6;
+    padding: 15px;
+    background-color: #ebdada; }
+    .contenido .habitaciones .habitacion.index {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border: 2px solid #775625;
+      padding: 20px 20px 20px 20px;
+      margin: 20px; }
+      .contenido .habitaciones .habitacion.index img {
+        width: 250px;
+        height: 200px; }
+  .contenido .restaurante {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 6/7;
+    background-color: #ebdada;
+    padding: 15px; }
+    .contenido .restaurante .restaurante-index {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border: 2px solid #775625;
+      padding: 20px 20px 20px 20px;
+      margin: 20px; }
+      .contenido .restaurante .restaurante-index img {
+        width: 250px;
+        height: 200px; }
+
+/*!--------ELHOTEL.HTML--------*/
+.presentacion {
+  width: 100%;
+  grid-area: main;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 2/7;
+  background-color: #0a2925; }
+  .presentacion h2 {
+    width: 100%;
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/7;
+    color: #ebdada;
+    font-family: "GFS Didot";
+    background-color: #0a2925; }
+  .presentacion .bienvenida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .presentacion .bienvenida img {
+      width: 600px;
+      height: 400px;
+      padding: 30px; }
+    .presentacion .bienvenida p {
+      text-align: center;
+      font-size: 20px;
+      color: #ebdada;
+      padding: 45px; }
+  .presentacion h2 {
+    color: #ebdada;
+    width: 100%;
+    height: 30px;
+    padding: 15px 15px 10px 15px;
+    text-align: center;
+    font-style: italic;
+    font-size: 25px; }
+  .presentacion .historia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #0a2925;
+    width: 100%; }
+    .presentacion .historia img {
+      width: 600px;
+      height: 500px;
+      margin-top: 20px;
+      padding: 20px 20px 20px 20px; }
+    .presentacion .historia p {
+      padding: 20px 20px 20px 20px; }
+    .presentacion .historia a {
+      border: 2px solid #775625;
+      color: #ebdada;
+      text-decoration: none;
+      padding: 10px 10px 10px 10px;
+      margin: 0px 20px 20px 20px;
+      background-color: #1f413d;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+
+/*!--------HABITACIONES.HTML--------*/
+.interior-habitaciones {
+  grid-area: main;
+  background-color: #0a2925;
+  width: 100%;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 2/4; }
+  .interior-habitaciones h2 {
+    color: #ebdada;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    text-align: center;
+    font-style: italic;
+    font-size: 30px; }
+  .interior-habitaciones .nuestras-habitaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .interior-habitaciones .nuestras-habitaciones p {
+      color: #ebdada;
+      width: 40%;
+      height: auto;
+      padding: 15px 30px 10px 30px;
+      text-align: center;
+      font-style: italic;
+      font-size: 15px; }
+    .interior-habitaciones .nuestras-habitaciones img {
+      width: 400px;
+      height: 500px;
+      padding: 20px 20px 35px 20px; }
+    .interior-habitaciones .nuestras-habitaciones .galeria-habitaciones {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 90%;
+      transform: scale(1.1);
+      margin: 25px;
+      gap: 20px; }
+
+/*!--------GASTRONOMIA.HTML--------*/
+/*!---------INDEX--------*/
+.pie {
+  grid-area: footer;
+  width: 100%;
+  height: auto;
+  background-color: #ebdada;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 8/10; }
+  .pie .mapa {
+    background-color: #ebdada;
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  .pie h4 {
+    padding: 15px 10px 15px 10px;
+    font-size: 15px;
+    color: #0a2925;
+    background-color: #ebdada;
+    margin: 20px; }
+  .pie p {
+    font-size: 15px;
+    text-align: left;
+    color: #0a2925;
+    padding: 10px 10px 10px 10px; }
+  .pie .redes-sociales {
+    width: 100%;
+    height: 100px;
+    background-color: #ebdada;
+    grid-column: 1/2;
+    grid-row: 2/3; }
+    .pie .redes-sociales h4 {
+      padding: 10px;
+      margin: 0;
+      font-size: 15px;
+      color: #0a2925;
+      background-color: #ebdada; }
+    .pie .redes-sociales div a img {
+      width: 25px;
+      height: 25px;
+      margin: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      display: inline-block; }

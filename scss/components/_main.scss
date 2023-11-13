@@ -1,0 +1,221 @@
+/*!--------INDEX.HTML--------*/ 
+.contenido{
+    width: 100%;
+    grid-area: main;
+    .hero{
+        width: 100%;
+        display: grid;
+        grid-column: 1/4;
+        grid-row: 2/4;
+        margin-top: 20px;
+        img{
+            width: 100%;
+            height: 500px;
+            border: 2px solid $color-border-primario;
+            margin: 40px;
+            display: grid;
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        h2{
+            display: grid;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            place-items: center;
+            font-style: italic;
+            text-align: center;
+            color: $color-secundario;
+            font-size: nth($size,5);
+            margin: 40px;
+            padding: 20px;
+            background-color: $color-primario;
+    
+        }
+        a{
+            display: grid;
+            grid-column: 3/4;
+            grid-row: 4/5;
+            border: 2px solid $color-border-primario;
+            color: $color-terciario;
+            font-size: nth($size,2);
+            text-decoration: none;
+            text-align: center;
+            background-color: $color-secundario;
+            padding: 10px 10px 10px 10px;
+            margin: 25px
+
+        }
+    
+    }
+    .habitaciones{
+        display: grid;
+        grid-column: 1/4;
+        grid-row: 5/6;
+        padding: 15px;
+        background-color: $color-secundario;
+        .habitacion.index{
+            @include flex(flex, space-evenly, center);
+            border: 2px solid $color-border-primario;
+            padding: 20px 20px 20px 20px;
+            margin: 20px;
+            img{
+                width: 250px;
+                height: 200px;
+            }
+            p{
+                @extend %p-index;
+            }
+        }
+        a{
+            @extend %boton-vermas-index;
+        }
+    }
+    .restaurante{
+        display: grid;
+        grid-column: 1/4;
+        grid-row: 6/7;
+        background-color: $color-secundario;
+        padding: 15px;
+        .restaurante-index{
+            @include flex(flex, space-evenly, center);
+            border: 2px solid $color-border-primario;
+            padding: 20px 20px 20px 20px;
+            margin: 20px;
+            img{
+                width: 250px;
+                height: 200px;
+            }
+            p{
+                @extend %p-index;
+            }
+        }
+        a{  
+            @extend %boton-vermas-index;
+        }
+    }
+}
+/*!--------ELHOTEL.HTML--------*/ 
+.presentacion{
+    width: 100%;
+    grid-area: main;
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/7;
+    background-color: $color-primario;
+    h2{
+        width: 100%;
+        display: grid;
+        grid-column: 1/4;
+        grid-row: 2/7;
+        color: $color-secundario;
+        font-family: nth($font,1);
+        background-color: $color-primario;
+    }
+    .bienvenida{
+        @include flex(flex, space-between, center);
+
+        img{
+            width: 600px;
+            height: 400px;
+            padding: 30px;
+        }
+        p{
+            text-align: center;
+            font-size: nth($size,3);
+            color:$color-secundario;
+            padding: 45px;
+        }
+    }
+    h2{ color: $color-secundario;
+        width: 100%;
+        height: 30px;
+        padding: 15px 15px 10px 15px;
+        text-align: center;
+        font-style: italic;
+        font-size: nth($size,4)}
+
+    .historia{
+        @include flex(flex, center,center);
+        flex-direction: row-reverse;
+        background-color: $color-primario;
+        width: 100%;
+
+        img{
+            width: 600px;
+            height: 500px;
+            margin-top: 20px;
+            padding: 20px 20px 20px 20px;
+        }
+        p{
+            padding: 20px 20px 20px 20px;
+        }
+    a{
+        border: 2px solid $color-border-primario;
+        color: $color-secundario;
+        text-decoration: none;
+        padding: 10px 10px 10px 10px;
+        margin: 0px 20px 20px 20px;
+        background-color: $color-header;
+        @include flex(flex,space-evenly,center);     
+    }    
+    }
+}
+/*!--------HABITACIONES.HTML--------*/ 
+.interior-habitaciones{
+    grid-area: main;
+    background-color: $color-primario;
+    width: 100%;
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/4;
+    h2{
+        color: $color-secundario;
+        width: 100%;
+        padding: 15px 15px 10px 15px;
+        text-align: center;
+        font-style: italic;
+        font-size: nth($size,5);
+    }
+    .nuestras-habitaciones{
+        @include flex(flex,center,center);
+        flex-wrap: wrap;
+        p{
+            color: $color-secundario;
+            width: 40%;
+            height: auto;
+            padding: 15px 30px 10px 30px;
+            text-align:center;
+            font-style: italic;
+            font-size: nth($size,2);
+        }
+        img{
+            width: 400px;
+            height: 500px;
+            padding: 20px 20px 35px 20px;
+
+        }
+    .galeria-habitaciones{
+        @include flex(flex, center, center);
+        flex-wrap: wrap;
+        width:90%;
+        transform: scale(1.1);
+        margin: 25px;
+        gap:20px;
+        img{
+            @extend %galeria-habitaciones;
+        }
+        img{
+            @extend %galeria-habitaciones;
+        }
+        img{
+            @extend %galeria-habitaciones;
+        }
+        img{
+            @extend %galeria-habitaciones;
+        }
+    }    
+    }
+}
+/*!--------GASTRONOMIA.HTML--------*/ 

@@ -1,0 +1,88 @@
+/*!--------RESET--------*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: $color-primario;
+}
+
+/*!--------BOOSTRAP--------*/ 
+
+.navbar{
+    grid-area: nav;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 20px;
+        &-toggler {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px
+        }
+                    .navbar-toggler-icon{color: $color-secundario;
+                    }
+        .collapse {background-color: $color-terciario;
+        .navbar-nav {
+            .nav-item {
+                font-size: 15px;
+                margin: 16px;
+                text-align: end;
+                display: inline-block;}
+                        .nav-link{
+                            color:$color-secundario;
+                            text-decoration: none;
+                            list-style: none;}
+}
+}
+}
+/*!--------INDEX MAIN BOOSTRAP CARDS REVIEW--------*/ 
+.cards-review{
+    grid-column: 1/4;
+    grid-row: 7/8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 33px 20px 33px;
+    border: 2px solid $color-border-primario;
+                .card{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin: 10px;
+                    background-color: $color-primario;
+                        .card-img-top{
+                            width: 130px;
+                            height: 130px;
+                            padding: 10px;
+                            border-radius: 130px;
+                        }
+                        .card-body{
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                                    .card-text{
+                                        font-size: 12px;
+                                        text-align: center;
+                                        background-color: $color-cards-review;
+                                        font-family: 'Lato', sans-serif;
+                                        color: $color-secundario;}
+                        }
+                }
+}
+        
+/*!--------IFRAME GOOGLE MAPS FOOTER--------*/ 
+iframe{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
