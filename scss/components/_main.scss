@@ -31,7 +31,6 @@
             margin: 40px;
             padding: 20px;
             background-color: $color-primario;
-    
         }
         a{
             display: grid;
@@ -45,17 +44,15 @@
             background-color: $color-secundario;
             padding: 10px 10px 10px 10px;
             margin: 25px
-
         }
-    
     }
     .habitaciones{
         display: grid;
         grid-column: 1/4;
-        grid-row: 5/6;
-        padding: 15px;
+        grid-row: 6/7;
+        padding: 20px;
         background-color: $color-secundario;
-        .habitacion.index{
+        .habitacion-index{
             @include flex(flex, space-evenly, center);
             border: 2px solid $color-border-primario;
             padding: 20px 20px 20px 20px;
@@ -96,26 +93,22 @@
         }
     }
 }
-/*!--------ELHOTEL.HTML--------*/ 
+/*!--------EL HOTEL HTML--------*/ 
 .presentacion{
     width: 100%;
     grid-area: main;
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 2/7;
     background-color: $color-primario;
     h2{
         width: 100%;
-        display: grid;
-        grid-column: 1/4;
-        grid-row: 2/7;
+        display:flex;
+        justify-content: center;
+        align-items: center;
         color: $color-secundario;
         font-family: nth($font,1);
         background-color: $color-primario;
     }
     .bienvenida{
         @include flex(flex, space-between, center);
-
         img{
             width: 600px;
             height: 400px;
@@ -135,13 +128,11 @@
         text-align: center;
         font-style: italic;
         font-size: nth($size,4)}
-
     .historia{
         @include flex(flex, center,center);
         flex-direction: row-reverse;
         background-color: $color-primario;
         width: 100%;
-
         img{
             width: 600px;
             height: 500px;
@@ -149,16 +140,18 @@
             padding: 20px 20px 20px 20px;
         }
         p{
+            color: $color-secundario;
             padding: 20px 20px 20px 20px;
         }
     a{
+        @include flex(flex,space-evenly,center);
         border: 2px solid $color-border-primario;
         color: $color-secundario;
         text-decoration: none;
         padding: 10px 10px 10px 10px;
         margin: 0px 20px 20px 20px;
         background-color: $color-header;
-        @include flex(flex,space-evenly,center);     
+        font-size: nth($size,3);
     }    
     }
 }
@@ -206,16 +199,109 @@
         img{
             @extend %galeria-habitaciones;
         }
-        img{
-            @extend %galeria-habitaciones;
-        }
-        img{
-            @extend %galeria-habitaciones;
-        }
-        img{
-            @extend %galeria-habitaciones;
-        }
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+                -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+                -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+            }
     }    
     }
 }
 /*!--------GASTRONOMIA.HTML--------*/ 
+.gastronomia{
+    grid-area: main;
+    width: 90%;
+    background-color: $color-primario;
+    color: $color-secundario;
+    padding: 15px;
+    @include flex(flex, center,center);
+    flex-direction: column;
+    margin-left: 30px;
+    h2{
+        text-align: center;
+        font-size: 30px;
+        font-style: italic;
+        padding: 15px;
+    }
+    p{
+        color: $color-secundario;
+        width: 100%;
+        height: 300px;
+        padding: 15px 30px 10px 30px;
+        text-align: center;
+        font-style: italic;
+        font-size: nth($size,2);
+    }
+    .galeria-resto{
+        background-color: $color-primario;
+        transform: scale(1.1);
+        flex-wrap: wrap;
+        @include flex(flex,space-evenly,center);
+        gap:15px;
+        margin-bottom: 25px;
+        img{
+            @extend %galeria-gastronomia;
+        }
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+                -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+                -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+            }
+    }
+}
+/*!--------ACTIVIDADES HTML--------*/
+.actividades{
+    grid-area: main;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+
+    .spa .aguas .yoga .escalada .treaking .standup-paddle {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.79);
+        transition: 0.3s;
+        border-radius: 5px;
+        align-items: center;
+    }
+            .card-actividades{ 
+                width: 200px;
+                height: 230px;
+                border-radius: 5px 5px 0 0;
+                align-items: center;
+                margin-top: 15px;
+            }
+            .img{
+                align-items: center;
+            }
+            .card-body{
+                padding:5px;
+                color: rgb(235, 218, 218);
+                font-size: 15px;
+            }
+                h5{
+                    text-align: center;
+                    font-size: nth ($size,3);
+                    background-color: $color-cards-review;
+                }
+                .card-text-actividades{
+                    color:rgb(235, 218, 218);
+                    margin: 10px;
+                    font-size: nth($size,2);
+                }
+                .boton-actividades{
+                    text-decoration: none;
+                    text-align: center;
+                    color: rgb(235, 218, 218);
+                    background-color: rgb(111, 140, 120);
+                    padding: 10px 20px;
+                    margin: 15px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                    .boton-actividades:hover {
+                        background-color:rgb(10, 41, 37);
+                    }
+                }
+}

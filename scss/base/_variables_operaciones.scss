@@ -61,6 +61,21 @@ $size:
     justify-items: center;
 }
 
+%galeria-gastronomia{
+    width: 250px;
+    height: 270px;
+    transition: 1s;
+}
+
+%h3-amenities-gallery{
+    text-align: center;
+    font-size: medium;
+    color: rgb(235, 218, 218);
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.31);
+    width: 100%;
+}
 /*MIXINS*/ 
 
 @mixin flex($flex,$justify,$align){

@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center; }
 
-.contenido .habitaciones .habitacion.index p, .contenido .restaurante .restaurante-index p {
+.contenido .habitaciones .habitacion-index p, .contenido .restaurante .restaurante-index p {
   text-align: center;
   font-size: 17px;
   color: #0a2925;
@@ -36,6 +36,11 @@
   margin: 25px,0px,20px,0px;
   transition: 1s;
   justify-items: center; }
+
+.gastronomia .galeria-resto img {
+  width: 250px;
+  height: 270px;
+  transition: 1s; }
 
 /*MIXINS*/
 /*!--------RESET--------*/
@@ -115,22 +120,14 @@ iframe {
   align-items: center;
   padding: 20px; }
 
-/*!--------INDEX HEADER--------*/
+/*!--------INDEX--------*/
 .grid-container {
   width: 100%;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "header header header"
- "nav nav nav"
- "main main main"
- "main main main"
- "main main main"
- "main main main"
- "main main main"
- "footer footer footer"
- "footer footer footer"; }
+  grid-template-areas: "header header header" "nav nav nav" "main main main" "main main main" "main main main" "main main main" "main main main" "footer footer footer" "footer footer footer"; }
   .grid-container .header {
     grid-area: header;
     width: 100%;
@@ -170,6 +167,7 @@ iframe {
           font-size: 15px;
           font-family: "GFS Didot"; }
 
+/*!--------EL HOTEL HTML--------*/
 /*!--------INDEX.HTML--------*/
 .contenido {
   width: 100%;
@@ -217,17 +215,17 @@ iframe {
   .contenido .habitaciones {
     display: grid;
     grid-column: 1/4;
-    grid-row: 5/6;
-    padding: 15px;
+    grid-row: 6/7;
+    padding: 20px;
     background-color: #ebdada; }
-    .contenido .habitaciones .habitacion.index {
+    .contenido .habitaciones .habitacion-index {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       border: 2px solid #775625;
       padding: 20px 20px 20px 20px;
       margin: 20px; }
-      .contenido .habitaciones .habitacion.index img {
+      .contenido .habitaciones .habitacion-index img {
         width: 250px;
         height: 200px; }
   .contenido .restaurante {
@@ -247,19 +245,16 @@ iframe {
         width: 250px;
         height: 200px; }
 
-/*!--------ELHOTEL.HTML--------*/
+/*!--------EL HOTEL HTML--------*/
 .presentacion {
   width: 100%;
   grid-area: main;
-  display: grid;
-  grid-column: 1/4;
-  grid-row: 2/7;
   background-color: #0a2925; }
   .presentacion h2 {
     width: 100%;
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 2/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #ebdada;
     font-family: "GFS Didot";
     background-color: #0a2925; }
@@ -297,17 +292,19 @@ iframe {
       margin-top: 20px;
       padding: 20px 20px 20px 20px; }
     .presentacion .historia p {
+      color: #ebdada;
       padding: 20px 20px 20px 20px; }
     .presentacion .historia a {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
       border: 2px solid #775625;
       color: #ebdada;
       text-decoration: none;
       padding: 10px 10px 10px 10px;
       margin: 0px 20px 20px 20px;
       background-color: #1f413d;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center; }
+      font-size: 20px; }
 
 /*!--------HABITACIONES.HTML--------*/
 .interior-habitaciones {
@@ -350,8 +347,97 @@ iframe {
       transform: scale(1.1);
       margin: 25px;
       gap: 20px; }
+      .interior-habitaciones .nuestras-habitaciones .galeria-habitaciones:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+        -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+        -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79); }
 
 /*!--------GASTRONOMIA.HTML--------*/
+.gastronomia {
+  grid-area: main;
+  width: 90%;
+  background-color: #0a2925;
+  color: #ebdada;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 30px; }
+  .gastronomia h2 {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    padding: 15px; }
+  .gastronomia p {
+    color: #ebdada;
+    width: 100%;
+    height: 300px;
+    padding: 15px 30px 10px 30px;
+    text-align: center;
+    font-style: italic;
+    font-size: 15px; }
+  .gastronomia .galeria-resto {
+    background-color: #0a2925;
+    transform: scale(1.1);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px; }
+    .gastronomia .galeria-resto:hover {
+      transform: scale(1.1);
+      box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+      -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+      -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79); }
+
+/*!--------ACTIVIDADES HTML--------*/
+.actividades {
+  grid-area: main;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15px; }
+  .actividades .spa .aguas .yoga .escalada .treaking .standup-paddle {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.79);
+    transition: 0.3s;
+    border-radius: 5px;
+    align-items: center; }
+  .actividades .card-actividades {
+    width: 200px;
+    height: 230px;
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+    margin-top: 15px; }
+  .actividades .img {
+    align-items: center; }
+  .actividades .card-body {
+    padding: 5px;
+    color: #ebdada;
+    font-size: 15px; }
+  .actividades h5 {
+    text-align: center;
+    font-size: nth 10px, 15px, 20px, 25px, 30px, 35px, 3;
+    background-color: #6f8c78; }
+  .actividades .card-text-actividades {
+    color: #ebdada;
+    margin: 10px;
+    font-size: 15px; }
+  .actividades .boton-actividades {
+    text-decoration: none;
+    text-align: center;
+    color: #ebdada;
+    background-color: #6f8c78;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; }
+    .actividades .boton-actividades .boton-actividades:hover {
+      background-color: #0a2925; }
+
 /*!---------INDEX--------*/
 .pie {
   grid-area: footer;
