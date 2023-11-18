@@ -592,7 +592,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     height: 100%;
     margin: 20px;
 }
@@ -601,7 +600,7 @@ body {
     padding: 15px 10px 15px 10px;
     font-size: 15px;
     color: rgb(10, 41, 37);
-    background-color: rgb(235, 218, 218)
+    background-color: rgb(235, 218, 218);
 }
 
 .reservas form div {

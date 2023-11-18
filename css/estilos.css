@@ -134,7 +134,8 @@ iframe {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #1f413d; }
+    background-color: #0a2925;
+    background-image: linear-gradient(90deg, #0a2925 0%, #254e49 100%); }
     .grid-container .header .container-titulo {
       width: 100%;
       display: flex;
@@ -167,7 +168,6 @@ iframe {
           font-size: 15px;
           font-family: "GFS Didot"; }
 
-/*!--------EL HOTEL HTML--------*/
 /*!--------INDEX.HTML--------*/
 .contenido {
   width: 100%;
@@ -257,7 +257,8 @@ iframe {
     align-items: center;
     color: #ebdada;
     font-family: "GFS Didot";
-    background-color: #0a2925; }
+    background-color: #0a2925;
+    margin-top: 15px; }
   .presentacion .bienvenida {
     display: flex;
     justify-content: space-between;
@@ -283,7 +284,7 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: column;
     background-color: #0a2925;
     width: 100%; }
     .presentacion .historia img {
@@ -293,11 +294,10 @@ iframe {
       padding: 20px 20px 20px 20px; }
     .presentacion .historia p {
       color: #ebdada;
-      padding: 20px 20px 20px 20px; }
+      padding: 20px 20px 20px 20px;
+      font-size: 20px;
+      text-align: center; }
     .presentacion .historia a {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
       border: 2px solid #775625;
       color: #ebdada;
       text-decoration: none;
@@ -397,46 +397,117 @@ iframe {
 .actividades {
   grid-area: main;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 15px; }
-  .actividades .spa .aguas .yoga .escalada .treaking .standup-paddle {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.79);
-    transition: 0.3s;
-    border-radius: 5px;
-    align-items: center; }
-  .actividades .card-actividades {
-    width: 200px;
-    height: 230px;
-    border-radius: 5px 5px 0 0;
-    align-items: center;
-    margin-top: 15px; }
-  .actividades .img {
-    align-items: center; }
-  .actividades .card-body {
-    padding: 5px;
-    color: #ebdada;
-    font-size: 15px; }
-  .actividades h5 {
-    text-align: center;
-    font-size: nth 10px, 15px, 20px, 25px, 30px, 35px, 3;
-    background-color: #6f8c78; }
-  .actividades .card-text-actividades {
-    color: #ebdada;
-    margin: 10px;
-    font-size: 15px; }
-  .actividades .boton-actividades {
-    text-decoration: none;
-    text-align: center;
-    color: #ebdada;
-    background-color: #6f8c78;
-    padding: 10px 20px;
-    margin: 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; }
-    .actividades .boton-actividades .boton-actividades:hover {
-      background-color: #0a2925; }
+
+.spa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.aguas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.yoga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.escalada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.treaking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.standup-paddle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.spa .aguas .yoga .escalada .treaking .standup-paddle {
+  border-radius: 5px; }
+
+.card-actividades {
+  width: 200px;
+  height: 230px;
+  border-radius: 5px;
+  margin-top: 15px; }
+
+.img {
+  align-content: center; }
+
+.card-body {
+  padding: 5px;
+  color: #ebdada;
+  font-size: 15px; }
+
+h5 {
+  text-align: center;
+  font-size: nth 10px, 15px, 20px, 25px, 30px, 35px, 3;
+  background-color: #6f8c78; }
+
+.card-text-actividades {
+  color: #ebdada;
+  margin: 10px;
+  font-size: 15px;
+  text-align: center; }
+
+.boton-actividades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  color: #ebdada;
+  background-color: #6f8c78;
+  padding: 10px 20px;
+  margin: 15px;
+  border-radius: 5px; }
+
+/*!---------RESERVAR HTML--------*/
+.reservar {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 20px; }
+  .reservar .reservas {
+    margin: 20px; }
+    .reservar .reservas h4 {
+      padding: 15px 10px 15px 10px;
+      font-size: 15px;
+      text-align: center;
+      color: #0a2925;
+      background-color: #ebdada; }
+    .reservar .reservas form div {
+      font-style: italic;
+      font-size: 15px;
+      color: #ebdada;
+      display: flex;
+      justify-content: end;
+      align-items: center; }
+      .reservar .reservas form div label {
+        padding: 8px; }
+      .reservar .reservas form div textarea {
+        margin: 8px; }
+      .reservar .reservas form div .enviar-restablecer input {
+        padding: 20px;
+        margin: 20px; }
 
 /*!---------INDEX--------*/
 .pie {
