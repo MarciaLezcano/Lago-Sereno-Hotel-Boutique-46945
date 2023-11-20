@@ -30,13 +30,6 @@
   justify-content: space-evenly;
   align-items: center; }
 
-.interior-habitaciones .nuestras-habitaciones .galeria-habitaciones img {
-  width: 200px;
-  height: 200px;
-  margin: 25px,0px,20px,0px;
-  transition: 1s;
-  justify-items: center; }
-
 .gastronomia .galeria-resto img {
   width: 250px;
   height: 270px;
@@ -149,7 +142,8 @@ iframe {
         display: flex;
         justify-content: center;
         align-items: end;
-        flex-direction: column; }
+        flex-direction: column;
+        width: 100%; }
         .grid-container .header .container-titulo .titulo h1 {
           width: 100%;
           color: #ebdada;
@@ -338,20 +332,35 @@ iframe {
       width: 400px;
       height: 500px;
       padding: 20px 20px 35px 20px; }
-    .interior-habitaciones .nuestras-habitaciones .galeria-habitaciones {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 90%;
+  .interior-habitaciones .galeria-habitaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    transform: scale(1.1);
+    margin: 25px;
+    gap: 20px; }
+    .interior-habitaciones .galeria-habitaciones img {
+      width: 200px;
+      height: 250px;
+      margin: 25px,0px,20px,0px;
+      transition: 1s;
+      justify-items: center; }
+    .interior-habitaciones .galeria-habitaciones:hover {
       transform: scale(1.1);
-      margin: 25px;
-      gap: 20px; }
-      .interior-habitaciones .nuestras-habitaciones .galeria-habitaciones:hover {
-        transform: scale(1.1);
-        box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
-        -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
-        -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79); }
+      box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+      -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
+      -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79); }
+  .interior-habitaciones a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #775625;
+    color: #ebdada;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    margin: 25px 20px 20px 20px; }
 
 /*!--------GASTRONOMIA.HTML--------*/
 .gastronomia {
@@ -374,24 +383,30 @@ iframe {
     color: #ebdada;
     width: 100%;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 30px 10px 30px;
     text-align: center;
     font-style: italic;
     font-size: 15px; }
   .gastronomia .galeria-resto {
     background-color: #0a2925;
-    transform: scale(1.1);
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px; }
-    .gastronomia .galeria-resto:hover {
+    gap: 35px;
+    margin-bottom: 30px; }
+    .gastronomia .galeria-resto img {
+      width: 200px;
+      height: 250px;
       transform: scale(1.1);
       box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
       -webkit-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79);
       -moz-box-shadow: 10px 10px 19px 0px rgba(0, 0, 0, 0.79); }
+    .gastronomia .galeria-resto:hover {
+      transform: scale(1.1); }
 
 /*!--------ACTIVIDADES HTML--------*/
 .actividades {
@@ -554,3 +569,201 @@ h5 {
       justify-content: space-evenly;
       align-items: center;
       display: inline-block; }
+
+/*!-------index-------*/
+@media screen and (max-width: 997px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "main main" "main main" "main main" "main main" "main main" "main main" "footer footer" "footer footer"; }
+    .grid-container .header {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .grid-container .contenido {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+    .grid-container .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 20px; }
+      .grid-container .hero img {
+        width: 60%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; }
+      .grid-container .hero h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        margin: 20px;
+        padding: 10px; }
+      .grid-container .hero a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px; } }
+
+@media screen and (max-width: 700px) {
+  .hero img {
+    width: 50%;
+    height: 300px; }
+  h2 {
+    font-size: 25px; }
+  .habitaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px; }
+    .habitaciones .habitacion-index {
+      justify-content: center;
+      flex-direction: column; }
+  a {
+    font-size: 13px; }
+  .restaurante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px; }
+    .restaurante .restaurante-index {
+      justify-content: center;
+      flex-direction: column; }
+  a {
+    font-size: 13px; } }
+
+@media screen and (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "main" "main" "main" "main" "main" "footer" "footer"; }
+    .grid-container .header .container-titulo {
+      justify-content: space-between; }
+    .grid-container .logo img {
+      margin: 0; }
+    .grid-container .titulo h1 {
+      font-size: 20px; }
+    .grid-container .titulo h2 {
+      font-size: 15px; }
+    .grid-container .navbar {
+      width: 60%;
+      margin: 0; }
+    .grid-container .contenido .hero h2 {
+      font-size: 17px;
+      margin: 0; }
+    .grid-container .contenido .hero a {
+      font-size: 13px; }
+    .grid-container .contenido .hero .pie .mapa p {
+      font-size: 13px;
+      text-align: center; } }
+
+@media screen and (max-width: 550px) {
+  .grid-container .header .conteiner-titulo h1 {
+    font-size: 20px; }
+  .grid-container .header .conteiner-titulo h2 {
+    font-size: 10px; }
+  .grid-container .header .navbar {
+    width: 30%; }
+  .contenido .hero img {
+    width: 250px;
+    height: 200px; }
+  .pie .mapa h4 {
+    text-align: center; }
+  .pie .redes-sociales h4 {
+    text-align: center; }
+  .pie .redes-sociales div {
+    justify-content: center;
+    align-content: center; } }
+
+@media screen and (max-width: 430px) {
+  .grid-container .contenido .hero h2 {
+    font-size: 12px; }
+  .grid-container .contenido .habitaciones .habitaciones-index p {
+    font-size: 10px; } }
+
+/*!--------el hotel--------*/
+@media screen and (max-width: 950px) {
+  .grid-container.presentacion h2 {
+    font-size: 17px; }
+  .bienvenida {
+    justify-content: center;
+    flex-direction: column; }
+    .bienvenida img {
+      width: 500px;
+      height: 400px; } }
+
+@media screen and (max-width: 520px) {
+  .grid-container .header .conteiner-titulo h1 {
+    font-size: 20px; }
+  .grid-container .header .conteiner-titulo h2 {
+    font-size: 10px; }
+  .grid-container .header .navbar {
+    width: 30%; } }
+
+/*!--------habitaciones--------*/
+@media screen and (max-width: 980px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "main" "main" "main" "main" "main" "footer" "footer"; }
+    .grid-container .interior-habitaciones .nuestras-habitaciones {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto; }
+      .grid-container .interior-habitaciones .nuestras-habitaciones img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap; }
+      .grid-container .interior-habitaciones .nuestras-habitaciones p {
+        width: 80%;
+        flex-direction: row; } }
+
+@media screen and (max-width: 430px) {
+  .interior-habitaciones .nuestras-habitaciones p {
+    font-size: 10px; }
+  .interior-habitaciones .nuestras-habitaciones img {
+    width: 210px;
+    height: 270px; }
+  .interior-habitaciones .nuestras-habitaciones a {
+    margin-top: 35px; } }
+
+/*!---------gastronomia---------*/
+@media screen and (max-width: 680px) {
+  .grid-container .header .conteiner-titulo {
+    width: 100%; }
+  .navbar {
+    width: 30%; }
+  .gastronomia p {
+    font-size: 12px; }
+  .gastronomia .galeria-resto {
+    width: 80%; } }
+
+@media screen and (max-width: 430px) {
+  .grid-container.header .conteiner-titulo .titulo h1 {
+    font-size: 18px; }
+  h2 {
+    font-size: 10px; }
+  .navbar {
+    width: 20%; }
+  .gastronomia p {
+    width: 100%;
+    font-size: 10px; }
+  .gastronomia .galeria-resto {
+    margin-bottom: 25px;
+    width: 100%; }
+    .gastronomia .galeria-resto img {
+      flex-direction: column;
+      width: 100px;
+      height: 150px; } }

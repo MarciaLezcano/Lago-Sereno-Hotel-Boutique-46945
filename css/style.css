@@ -407,7 +407,7 @@ body {
 
 .interior-habitaciones .galeria-habitaciones img {
     width: 200px;
-    height: 200px;
+    height: 300px;
     margin: 25px,0px,20px,0px;
     transition: 1s;
     justify-items: center;
@@ -716,7 +716,6 @@ body {
 
 /* INDEX HTML */
 @media screen and (max-width:997px) {
-
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -778,20 +777,7 @@ body {
     }
 }
 
-@media screen and (max-width:800px) {
-
-    .hero img {
-        width: 65%;
-        height: 250px;
-    }
-
-    .hero h2 {
-        font-size: 20px;
-    }
-
-}
-
-@media screen and (max-width:695px) {
+@media screen and (max-width:700px) {
 
     .habitaciones {
         display: flex;
@@ -1051,9 +1037,8 @@ body {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: colum;
+    flex-direction: column;
 }
-
 }
 
 /* AMENITIES HTML */
