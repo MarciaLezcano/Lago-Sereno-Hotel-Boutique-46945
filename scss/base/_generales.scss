@@ -12,35 +12,24 @@ body {
 
 /*!--------BOOSTRAP--------*/ 
 
-.navbar{
-    grid-area: nav;
+.grid-container.header.navbar.navbar-expand-lg{
     width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin: 20px;
-        &-toggler {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px
+    @include flex(flex,space-between,center);
+    .container-fluid{
+        width: 100%;
+        @include flex(flex,space-between,center);}
+        .navbar-brand {
+            @include flex(flex,space-between,center);
+            color: $color-secundario;
+            font-family: 'GFS Didot', serif;}
+                img{align-items: start;}
+        .collapse .navbar-collapse{
+            .nav-link.active{color:$color-secundario;}
+            .nav-link{color:$color-secundario;}
         }
-                    .navbar-toggler-icon{color: $color-secundario;
-                    }
-        .collapse {background-color: $color-terciario;
-        .navbar-nav {
-            .nav-item {
-                font-size: 15px;
-                margin: 16px;
-                text-align: end;
-                display: inline-block;}
-                        .nav-link{
-                            color:$color-secundario;
-                            text-decoration: none;
-                            list-style: none;}
-}
-}
-}
+    }
+
+
 /*!--------INDEX MAIN BOOSTRAP CARDS REVIEW--------*/ 
 .cards-review{
     grid-column: 1/4;
@@ -78,11 +67,13 @@ body {
 }
         
 /*!--------IFRAME GOOGLE MAPS FOOTER--------*/ 
-iframe{
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.pie{
+    .mapa{
+        iframe{
+            width: 200px;
+            height: 200px;
+            @include flex(flex, center,center);
+            padding: 20px;
+            margin:20px;}
+    }
 }

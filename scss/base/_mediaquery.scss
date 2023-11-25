@@ -1,5 +1,5 @@
-/*!-------index-------*/ 
 
+/*!-------index-------*/ 
 @media screen and (max-width:997px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -15,8 +15,6 @@
             "footer footer"
             "footer footer";
     
-        .header {
-            @include flex(flex,center,center);}
         .contenido {
             @include flex(flex,center,center);
             flex-direction: column;}
@@ -42,7 +40,7 @@
                 }}
             }            
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:750px){
     .hero img{
             width: 50%;
             height: 300px;
@@ -61,6 +59,7 @@
     a {
         font-size: 13px;
     }
+
     .restaurante {
         @include flex(flex,center,center);
         flex-direction: column;
@@ -72,7 +71,11 @@
     a {
         font-size: 13px;
     }
+    .redes-sociales{
+        flex-direction: column;
+    }
 }
+
 @media screen and (max-width:640px) {
 .grid-container {
     grid-template-columns: repeat(1, 1fr);
@@ -86,46 +89,24 @@
         "main"
         "main"
         "footer"
-        "footer";
-    .header .container-titulo {
-        justify-content: space-between;}
-        .logo img {
-            margin: 0;}
-        .titulo h1 {
-            font-size: 20px;
-        }
-        .titulo h2 {
-            font-size: 15px;
-        }
-    .navbar {
-        width: 60%;
-        margin: 0;
-    }
+        "footer";}
+
     .contenido .hero{
         h2 {
             font-size: 17px;
             margin: 0;}
         a {
-        font-size: 13px;}
+            font-size: 13px;}
     .pie .mapa p {
         font-size: 13px;
-        text-align: center;}}
-}
-}
+        text-align: center;}}}
+
+
 @media screen and (max-width:550px){
-.grid-container .header{
-    .conteiner-titulo{
-        h1{
-            font-size: 20px;}
-        h2{font-size: 10px;}
-    }
-    .navbar{
-        width: 30%;}
-}
     .contenido .hero img{
         width: 250px;
         height: 200px;
-        }
+    }
     .pie .mapa h4{
         text-align: center;
     }
@@ -146,27 +127,24 @@
 }
 /*!--------el hotel--------*/ 
 @media screen and (max-width:950px) {
-.grid-container.presentacion h2 {font-size: 17px;}
+.grid-container.presentacion 
+    h2 {font-size: 17px;}
     .bienvenida {
         justify-content: center;
         flex-direction: column;
         img {
             width: 500px;
-            height: 400px;}}
-}
-@media screen and (max-width:520px){
-.grid-container .header{
-    .conteiner-titulo{
-        h1{
-            font-size: 20px;}
-        h2{font-size: 10px;}
+            height: 400px;
+        }
     }
-    .navbar{
-        width: 30%;
+}
+@media screen and (max-width:480px){
+.presentacion{
+    h2{
+        font-size: 20px;
     }
 }
 }
-
 
 /*!--------habitaciones--------*/
 @media screen and (max-width:980px){
@@ -198,7 +176,7 @@
     }
 }
 }
-@media screen and (max-width:430px){
+@media screen and (max-width:460px){
 .interior-habitaciones .nuestras-habitaciones{
     p{
         font-size: 10px;
@@ -207,20 +185,29 @@
         width: 210px;
         height: 270px;
     }
+    
+.galeria-habitaciones{
+    height: 100%;
+    transform: scale(0.0);
+        img{
+            transition: none;
+            }
+            &:hover{
+                transform: scale(0.0);
+                box-shadow: none;
+                -webkit-box-shadow:none;
+                -moz-box-shadow:none;
+            }
     a{
-        margin-top: 35px;
+        margin: 35px;
     }
 }
 }
-
+}
 /*!---------gastronomia---------*/ 
 
 @media screen and (max-width:680px){
-.grid-container .header
-    .conteiner-titulo{
-        width:100%;}
-    .navbar{
-        width:30%;}
+    
     .gastronomia{
         p{
             font-size: 12px;
@@ -231,16 +218,7 @@
     }
 }
 @media screen and (max-width:430px){
-.grid-container.header .conteiner-titulo 
-    .titulo
-        h1{
-            font-size: 18px}
-        h2{
-            font-size: 10px;
-        }
-    .navbar{
-        width: 20%;
-    }
+
     .gastronomia{
         p{
             width: 100%;
@@ -258,3 +236,16 @@
     }
 }
 
+/*!---------footer--------*/
+@media screen and (max-width:600px){
+.pie{
+    @include flex(flex,center,center);
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width:445px){
+.reservar .reservas form div label{
+        font-size: 12px;
+    }
+}

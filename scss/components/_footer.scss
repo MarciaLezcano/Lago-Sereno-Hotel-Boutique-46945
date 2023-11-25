@@ -4,14 +4,13 @@
     width: 100%;
     height: auto;
     background-color: $color-secundario;
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 8/10;
+    @include flex(flex, space-between, center);
     .mapa{
         background-color: $color-secundario;
         display: grid;
         grid-column: 1/2;
         grid-row: 1/2;
+        margin:20px;
     }
         h4{
             padding: 15px 10px 15px 10px;
@@ -31,8 +30,7 @@
         width: 100%;
         height: 100px;
         background-color: $color-secundario;
-        grid-column: 1/2;
-        grid-row: 2/3;
+        @include flex(flex, center,center);
         h4{
             padding: 10px;
             margin: 0;
